@@ -1,0 +1,39 @@
+Day5:
+======
+1- Re-write Stack Example, with:
+	- static int counter
+	- static int getCounter()
+
+2- Base/Drived classes:
+
+class Base
+	- private members x
+	- protected member y
+	- constrcutors & destructor
+	- setters & getters
+	- function sum (return summation of x and y)
+
+class Drived
+	- private members z
+	- constrcutors & destructor
+	- setters & getters
+	- override function sum in derived to add functionality to the base sum function:
+	(return summation of x and y and z)
+	
+
+
+3- Class GeoShape:
+
+class Geoshape
+	- private members dim1, dim2
+	- constrcutors & destructor
+	- setters & getters
+	- function CalcArea(return 0)	
+
+	- then we have to create 4 derived classes (Rectangle, Square, Circle, Triangle) 
+	in which they inherit from GeoShape base class.
+	- override function CalcArea in these derived classes to claculate area according to each shape
+
+
+Note: Students should Trace the code by F7 or F8 to see the sequence of calling of constructors of Base and Derived.
+

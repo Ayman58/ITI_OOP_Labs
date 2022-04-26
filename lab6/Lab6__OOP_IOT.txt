@@ -1,0 +1,16 @@
+1- "Base-Drived" example, try the following:
+	- create pointer from base points to object from drived "call drived function using this pointer"
+	
+2- in "GeoShape" example, do changes required to:
+	- try "protected inheritance", to overcome "Square & Circle Problems of setting different dim values"
+	
+
+3- Composition Example: Point, Rect, Circle, Line + drawing graphics.
+	- each class should have: attributes, constructors, setters, Draw()
+
+
+4 Aggregation Example: Picture, Point, Rect, Circle, Line + graphics.
+	- class Picture should have: attributes, constructors, setters, Paint()
+
+	
+Note: check graphics settings on CodeBlocks

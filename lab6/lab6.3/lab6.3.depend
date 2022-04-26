@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1639319592 source:d:\iti\oop\oop labs\lab6\lab6.3\main.cpp
+	<iostream>
+	<Graphics.h>
+

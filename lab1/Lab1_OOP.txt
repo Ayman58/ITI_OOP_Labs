@@ -1,0 +1,32 @@
+Lab:
+====
+
+1) SWAP : 3 Version (pass by value, pass by address,  pass by ref)
+
+
+2) Complex Struct:
+
+	- member data: real , img
+	- member functions: setters & getters
+	- Standalone functions:
+		Complex Add(Complex C1, Complex C2);  
+		Complex Subtract(Complex C1, Complex C2);  
+		void print(Complex C);   // C = 5+3i
+
+	
+3) Check different cases of print:
+
+	real = 5, img = 3  // C1 = 5+3i
+
+	real = 5, img = -3  // C1 = 5 + -3i   ==> C1 = 5-3i
+
+	real = 5, img = 0  // C1 = 5 + 0i   ==> C1 = 5
+
+	real = 0, img = 3  // C1 = 0 + 3i   ==> C1 = 3i
+
+	real = 0, img = 0  // C1 = 0 + 0i   ==> C1 = 0
+
+
+	
+	
+	

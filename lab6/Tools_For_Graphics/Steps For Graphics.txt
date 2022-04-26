@@ -1,0 +1,16 @@
+Steps:
+=======
+
+1. Copy "graphics.h" & "winbgim.h" files, and go to Default CodeBlocks installation directory, which is 
+"C:\Program Files (x86)\CodeBlocks\MinGW\include". Paste the header files that you have copied.
+Then Copy "libbgi.a" and paste it to "C:\Program Files (x86)\CodeBlocks\MinGW\lib". 
+
+2. Open Code::Blocks. Then open "Settings -> Compiler -> Linker Settings". 
+	- In left part, Click Add button in link libraries part and browse and select libbgi.a file you just copied to MinGW folder.
+	- In right part (i.e. other linker options) paste commands "-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32"
+
+3. Click OK.
+
+4. Code::Blocks -> Settings -> Compiler -> CompilerSettings-> toolchain executables -> click autodetect button -> ok 
+
+5. Click OK.

@@ -1,0 +1,132 @@
+#include <iostream>
+
+using namespace std;
+
+
+struct cmpx
+{
+private:
+    int Real;       ///I have 2 Objects thus i need 2 Sets and 2 Gets
+    int Img;
+
+public:
+    // 2 Sets
+    void setReal(int R)   ///Member Function
+    {
+        Real = R;
+    }
+    void setImg(int I)
+    {
+        Img = I;
+    }
+
+    // 2 Gets
+    int getReal()
+    {
+        return Real;
+    }
+
+    int getImg()
+    {
+        return Img;
+    }
+
+    void print()
+{
+
+        cout<<"Result= "<<Real<<"+"<<Img<<"i";
+}
+
+//cmpx Add(cmpx* this, cmpx C)   /// 1 caller and 1 input paramter
+cmpx Add(cmpx C)   /// 1 caller and 1 input paramter
+{
+    cmpx cRes;
+    cRes.Real= this -> Real +C.Real;
+    cRes.setImg(Img + C.Img);
+    return cRes;
+}
+///overloading: multiple functions with the same name with the same clasee
+/// but diffrent in number of paramters ot type of parameters or order of paramteres
+void SetCmpx(int R, int I)
+{
+    Real = R;
+    Img = I;
+}
+
+
+
+void SetCmpx(int N)
+{
+    Real = Img = N;
+}
+void SetCmpx(int N, char* M)
+{
+    Real = Img = N;
+}
+
+///not valid overloading
+/// return overloading
+/*
+int SetCmpx(int R, int I)
+{
+    Real = R;
+    Img = I;
+    return Real;
+}
+///
+void SetCmpx(int RR, int II)
+{
+    Real = RR;
+    Img = II;
+}*/
+
+/// Construct can be with overloading
+/*
+Complex (int R, int I)  ///no return type /// constructor
+{
+    Real = R;
+    Img = I;
+}
+Complex ()  ///no return type /// constructor
+{
+    Real = Img =0;
+}
+Complex (int R)  ///no return type /// constructor
+{
+    Real = Img = R;
+}
+*/
+
+};
+
+
+cmpx Subtract(cmpx a1, cmpx a2)
+{
+    cmpx cRes;
+    cRes.setReal(a1.getReal()-a2.getReal());
+    cRes.setImg(a1.getImg()-a2.getImg());
+    return cRes;
+}
+
+int main()
+{
+    int r1,i1,r2,i2;
+    //cmpx A(3,4),B(2),C; ///Declare object
+    cmpx A,B,C;
+
+    cout<<"Enter Real, Img Values: ";
+    cin>>r1;
+    cin>>i1;
+    cin>>r2;
+    cin>>i2;
+
+    A.SetCmpx(r1,i1);
+    B.SetCmpx(r2,i2);
+     //pass by value
+
+    A.print();
+    B.print();
+    C = A.Add(B);   ///A and B// B by value
+    C.print();  ///object caller
+    return 0;
+}

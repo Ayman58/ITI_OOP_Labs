@@ -1,0 +1,126 @@
+#include <iostream>
+
+using namespace std;
+
+class Stack
+{
+	///int Stk []; 
+       int* Stk;
+       int Tos;
+       int Size;
+                
+public :
+    
+      Stack ()
+     {  
+       cout<<"\nparameter constructor"<<endl;
+       Size = 5 ;
+       Stk = new int [Size];
+       Tos = 0 ;
+ 
+     }
+     
+      Stack (int L)
+     {  
+    
+       cout<<"\nparameter constructor with one value "<<endl;
+       Size = L ;
+       Stk = new int [Size];
+       Tos = 0 ;
+
+     }
+     
+     ~Stack ()
+     {  
+
+      cout<<"\nparameter destructor"<<endl;
+       delete Stk [] ;
+
+     }
+
+        bool isFull()
+ 
+     {  
+        ///if (tos==5)
+          /// return true;
+     /// else 
+          /// return false; 
+
+          return (Tos ==5);
+     }
+
+       bool isEmpty()
+ 
+     {  
+        ///if (tos==5)
+          /// return true;
+     /// else 
+          /// return false; 
+
+          return (Tos ==0);
+     }
+    
+       void push(int n )
+      {  
+
+        if (isFull() == false)
+        Stk[Tos++] = n ;
+      else 
+         cout<<"stack is full "<<endl;
+      }
+         void pop( )
+       {  
+
+        if (!isEmpty() )
+         return Stk[--Tos]  ;
+      else   {
+         cout<<"stack is Empty "<<endl;
+            return -1 ;
+               }
+        }
+
+	int Peak()
+	{  }
+
+	Stack Reverse() //return new stack "with reversed internal array of original stack"
+	{  }
+
+	void PrintStack()
+	{  }
+}
+
+main()
+{
+	Stack S1;     /// parameterless
+
+                 Stack S2 (3);
+          
+	S1.Push(10);
+	S1.Push(20);
+	S1.Push(30);
+                 S1.Push(40);
+                 S1.Push(50);
+                 S1.Push(60);
+
+          cout<<"\nNum="<<S1.Pop();
+          cout<<"\nNum="<<S1.Pop();
+          cout<<"\nNum="<<S1.Pop();
+          cout<<"\nNum="<<S1.Pop();
+          cout<<"\nNum="<<S1.Pop();
+          cout<<"\nNum="<<S1.Pop();
+
+
+	
+
+  cout<<"\n___________________________________________________"<<endl;
+	
+	S2.Push(11);
+	S2.Push(12);
+
+
+          cout<<"\nNum="<<S2.Pop();
+          cout<<"\nNum="<<S2.Pop();
+	
+
+	
+}

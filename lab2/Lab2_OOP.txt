@@ -1,0 +1,52 @@
+1- class complex:
+=================
+	- member variables(real, img)
+	- constructors(default, parameterized)
+	- setters & getters
+	- member functions: "Addcomplex, subComplex, PrintComplex"  (use scope operator "::")
+	- destructor	
+
+
+2) Stack (LIFO):
+================
+
+Class Stack
+{
+	int[] Stk, Tos, Size;
+
+	int Peak()
+	{ ... }
+
+	Stack Reverse() //return new stack "with reversed internal array of original stack"
+	{ ... }
+
+	void PrintStack()
+	{ ... }
+}
+
+main()
+{
+	Stack S1 = new Stack(5);
+	
+	S1.Push(10);
+	S1.Push(20);
+	S1.Push(30);
+
+	Console.WriteLine(S1.Peak()); //30
+	Console.WriteLine(S1.Peak()); //30
+
+	Console.WriteLine(S1.Pop()); //30
+	Console.WriteLine(S1.Pop()); //20
+
+	Stack S2 = new Stack(5);
+	
+	S2.Push(3);
+	S2.Push(4);
+	S2.Push(5);
+	S2.Push(6);
+
+	Console.WriteLine(S2.Reverse().Pop()); 	
+}
+
+
+	 

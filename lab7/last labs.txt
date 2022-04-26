@@ -1,0 +1,30 @@
+1- late binding --> in "Base-Drived" example, try the following:
+	- create pointer from base points to object from drived "call drived function using this pointer"
+	- use "virtual" 
+
+
+2- in "GeoShape" example, do changes required to:
+	- prevent anyone from creating object of Geoshape class "make it abstract, using pure virtual function"
+	- make another function called "sumOfAllShapesArea", that takes 4 shapes and return sum of these shapes areas.
+
+
+3- Continue the Picture Example:
+      - Write new class Shape with variable color + setters and getters.. Rect, Circle, and Line to Inherit from it.
+      - in class Shape Make function "draw( )", a pure virtual function, then make necessary changes to other classes.
+      - Simplify the Picture class, so as to only be constructed by an array of Shapes (array of pointers to Shape), 
+	then use the pointer of base class to call the draw( ) function of Circle, Rect, and Line.
+
+
+4- Implement "Power" recursive function
+
+
+5- Apply Templates on:
+	- SWAP function, to swap: <int> , <Complex>
+	- Stack Class, to have Stack array of: <int>, <char>, <Complex>
+
+
+6- re-write class complex, add:  << , >> operator overloading 
+
+cout << C1;
+
+cin >> 
